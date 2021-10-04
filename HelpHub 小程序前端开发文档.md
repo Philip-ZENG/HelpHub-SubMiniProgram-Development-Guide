@@ -32,6 +32,9 @@
 - Chapter 1 : HelpHub+小程序介绍
 - Chapter 2: 知识技能准备
 - Chapter 3: 开发环境配置
+- Chapter 4: 源码架构分析
+- Chapter 5: 源码实现细节
+- Last Chpater: 小程序功能改进
 
 
 
