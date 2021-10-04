@@ -1,6 +1,6 @@
 # Chapter 3 开发环境配置
 
-最后更新日期：2021年10月2日
+最后更新日期：2021年10月3日
 
 作者：曾焯儒、金一鑫
 
@@ -38,19 +38,11 @@
     - 官方文档： 
     
       - https://taro-docs.jd.com/taro/docs/GETTING-STARTED#cli-%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85 
-      - 或 https://nervjs.github.io/taro/docs/GETTING-STARTED/
     
-      ```
-      # 使用 npm 安装 CLI
-      $ npm install -g @tarojs/cli
-      
-      # OR 使用 yarn 安装 CLI
-      $ yarn global add @tarojs/cli
-      ```
+      - 请根据官方文档指引完成下载
     
     - 技术博客：https://www.cnblogs.com/cczlovexw/p/13808842.html
       - 其中有一个Hello World的DEMO教学，可以试着做一下
-      
     - 对于Terminal“无法识别taro"问题，需要配置环境变量：https://blog.csdn.net/qq_34209233/article/details/105262687?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link
   - 官网下载的最新版本Taro是3.x，该小程序开发可能使用的是2.x，可能存在版本配置问题
     - 开发方提供的注释：迁移至 Taro 2.x <https://taro-docs.jd.com/taro/docs/2.2.8/migrate-to-2>
@@ -81,6 +73,8 @@
 
 - Git ssh密钥配置
 
+  - 介绍
+    - 密钥是一种在本地电脑于云端之间建立安全的数据传输渠道的方式。
   - 密钥配置可以参考链接 https://www.cnblogs.com/yuqiliu/p/12551258.html
   - 对于过程中可能遇到的问题，可以参考： https://www.codenong.com/13363553/
   - 注意事项
@@ -97,7 +91,7 @@
 
   - 在源码根目录下运行时，可能会遇到如下问题
 
-    ```
+    ```shell
     error Command failed.
     Exit code: 128
     Command: git
@@ -116,13 +110,13 @@
 
     - 出问题的代码是第86行
 
-      ```
+      ```shell
       "eslint-config-wmeimob": "ssh://git@codeup.aliyun.com:5f855dfb1858a17210466fd0/r_d_center/eslint-config-wmeimob.git"，
       ```
 
     - 这个应该是微盟自己开发的时候储存在”阿里云效代码管理“  codeup.aliyun.com 的一个内部的 eslint debug设置，我们没有权限下载依赖。
 
-    - 删除这一行之后，能供成功完成所有其他的路径下载，暂时来看删掉好像也没什么影响。
+    - 删除这一行之后，能供成功完成所有其他的路径下载，暂时（没有Debug的时候）来看删掉好像也没什么影响。
 
   - `yarn` 成功执行后，将node_modules-cover 里面的文件复制到 node_modules下
 
@@ -181,58 +175,4 @@
       ],
   ```
 
-
-
-## 关于源代码的说明
-
-- 目录结构说明
-
-  ```
-  config:taro 配置  
-  dist:打包目录  
-  doc:文档  
-  node_modules-cover:node_modules覆盖目录  
-  src:开发目录  
-      components:组件（全局组件，全局方法）  
-          assets:放置公用静态文件  
-          component:组件模板  
-          event-emitter:事件  
-          request:请求组件  
-              index.ts:请求文件  
-              listener.ts:token注入  
-          taro:taro函数修改  
-          utils:公用函数  
-      custom-tab-bar：自定义导航
-      modules:放置公司做的组件
-      pages:页面  
-          _template:页面模版  用于复制粘贴生成新页面
-          template:页面模版  用于了解基本写法
-      types:d.ts 补全
-      app.less:样式入口  
-      app.tsx:js入口  
-      config.ts:配置文件  
-      globalStore.ts:全局数据
-      index.html:html5项目的入口
-  tools:工具脚手架
-  ```
-
-- 前端UI组件
-
-  [前端组件列表](https://git.f.wmeimob.com/Frontend/front-end-catalog/src/master/project.md)
-
-- 源代码中用到的其他技术的学习参考资料
-
-  <https://wangdoc.com/javascript/> 
-
-  <http://es6.ruanyifeng.com/> 
-
-  <http://css.cuishifeng.cn/position.html> 
-
-  <https://nervjs.github.io/taro/docs/README.html> 
-
-  <https://taro-ui.aotu.io/#/docs/introduction> 
-
-  <https://react.docschina.org/> 
-
-  <https://www.tslang.cn/> 
 
