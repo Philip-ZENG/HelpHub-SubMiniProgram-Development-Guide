@@ -14,8 +14,8 @@
 
 参考资料：
 
-- Taro目录结构官方文档：https://www.cnblogs.com/cczlovexw/p/13808842.html
-- Taro使用教程：https://taro-docs.jd.com/taro/docs/folder
+- Taro目录结构官方文档：https://taro-docs.jd.com/taro/docs/folder
+- Taro使用教程：https://www.cnblogs.com/cczlovexw/p/13808842.html
 
 
 
