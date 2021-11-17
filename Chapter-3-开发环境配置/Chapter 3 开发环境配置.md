@@ -1,6 +1,6 @@
 # Chapter 3 开发环境配置
 
-最后更新日期：2021年10月3日
+最后更新日期：2021年11月17日
 
 作者：曾焯儒、金一鑫
 
@@ -30,46 +30,49 @@
     - 英文网：https://nodejs.org/en/
     - 中文网：http://nodejs.cn/
 
-- Taro安装
-
-  - 介绍
-    - Taro类似于网页开发中的Vue，可以理解为一个JavaScript的库，它提供了小程序搭建所需的一些框架、组件、工具，通过Taro，我们可以便捷地实现小程序的搭建。
-  - Taro下载参考
-    - 官方文档： 
-    
-      - https://taro-docs.jd.com/taro/docs/GETTING-STARTED#cli-%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85 
-    
-      - 请根据官方文档指引完成下载
-    
-    - 技术博客：https://www.cnblogs.com/cczlovexw/p/13808842.html
-      - 其中有一个Hello World的DEMO教学，可以试着做一下
-    - 对于Terminal“无法识别taro"问题，需要配置环境变量：https://blog.csdn.net/qq_34209233/article/details/105262687?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link
-  - 官网下载的最新版本Taro是3.x，该小程序开发可能使用的是2.x，可能存在版本配置问题
-    - 开发方提供的注释：迁移至 Taro 2.x <https://taro-docs.jd.com/taro/docs/2.2.8/migrate-to-2>
-      - 网页链接失效，不知道是什么意思
-
 - Yarn 安装
 
   - 介绍
-    - 可以把Yarn看作是一个用于下载各种包的下载中心，类似python的pip，和Node.js的npm是几乎同等功能的
+    - 可以把Yarn看作是一个用于下载各种包的下载和管理中心，类似python的pip，和Node.js的npm是几乎同等功能的
   - 版本要求
     - [yarn >= 1.22.4](https://classic.yarnpkg.com/en/docs/install)
     - 笔者安装的是v1.22.15
 
-- Taro环境安装
+- Taro安装
 
-  - 开发者使用了特定的Tarojs的版本，请在terminal/shell中依次运行下列指令
+  - 介绍
 
-    ```
-    yarn add -D @tarojs/cli@2.2.1
-    
-    yarn add -D @tarojs/mini-runner@2.2.1
-    
-    yarn add global mirror-config-china 
-    ```
+    - Taro是基于Vue或者React（JavaScript的库）搭建的一个更加上层的框架，它提供了微信小程序搭建所需的一些框架、组件、工具，通过Taro，我们可以便捷地实现小程序的搭建。
 
-  - 注意事项
-    - 如果在源文件的根目录文件夹下运行失败，可以尝试在其他位置运行指令，如：在desktop打开terminal运行
+  - Taro环境安装指令参考
+
+    - 开发者使用了特定的Tarojs的版本 `2.2.1`，请在terminal/shell中依次运行下列指令
+
+      ```shell
+      yarn add -D @tarojs/cli@2.2.1
+      
+      yarn add -D @tarojs/mini-runner@2.2.1
+      
+      yarn add global mirror-config-china 
+      ```
+
+    - 注意事项
+
+      - 如果在源文件的根目录文件夹下运行失败，可以尝试在其他位置运行指令，如：在desktop打开terminal运行
+
+  - 其他Taro下载参考：请注意下载 `2.2.1` 版本
+
+    - 官方文档： 
+
+      - https://taro-docs.jd.com/taro/docs/GETTING-STARTED#cli-%E5%B7%A5%E5%85%B7%E5%AE%89%E8%A3%85 
+
+      - 请根据官方文档指引完成下载
+    - 技术博客：https://www.cnblogs.com/cczlovexw/p/13808842.html
+      - 其中有一个Hello World的DEMO教学，可以试着做一下
+
+  - 可能存在的问题
+
+    - 对于Terminal“无法识别taro"问题，需要配置环境变量：https://blog.csdn.net/qq_34209233/article/details/105262687?utm_medium=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link&depth_1-utm_source=distribute.pc_relevant.none-task-blog-2%7Edefault%7ECTRLIST%7Edefault-2.no_search_link
 
 - Git ssh密钥配置
 
@@ -174,5 +177,4 @@
           }
       ],
   ```
-
 
